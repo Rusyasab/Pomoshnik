@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Какие задачи умеет решать Про</title>
+  <style>
+    :root { --ink:#252527; --panel:#f2f2f4; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-width:1076px; color:var(--ink); background:#fff; font:16px/1.42 -apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Helvetica Neue",Arial,sans-serif; }
+    button { font:inherit; }
+    button:focus-visible { outline:3px solid #8e7cf4; outline-offset:3px; }
+    .page { min-height:100svh; }
+    .section { width:996px; margin:0 auto; padding:54px 0 70px; background:#fff; }
+    h1 { margin:0 0 40px; text-align:center; font-size:30px; line-height:36px; letter-spacing:-.02em; }
+    .layout { display:grid; grid-template-columns:316px 656px; gap:24px; align-items:start; }
+    .categories { display:grid; gap:0; align-content:start; }
+    .category { border:0; border-bottom:1px solid #dedee2; border-radius:0; background:transparent; overflow:hidden; }
+    .category-button { display:flex; justify-content:space-between; align-items:center; gap:18px; width:100%; height:93px; padding:0; border:0; color:var(--ink); background:transparent; text-align:left; cursor:pointer; font-size:18px; font-weight:500; line-height:24px; }
+    .chevron { width:24px; height:24px; flex:0 0 24px; background:url("https://neuropro-promo-ruslan.sabzrus.chatgpt.site/assets/accordion-control.svg") center/24px 24px no-repeat; transform:rotate(0deg); transition:transform .2s ease; }
+    .category-button[aria-expanded="true"] { height:auto; min-height:57px; padding:0 0 9px; }
+    .category:first-child .category-button { height:auto; min-height:48px; padding:0 0 20px; }
+    .category:not(:first-child) .category-button[aria-expanded="true"] { padding-top:24px; }
+    .category-button[aria-expanded="true"] .chevron { transform:rotate(180deg); }
+    .category-copy { display:grid; grid-template-rows:0fr; transition:grid-template-rows .24s ease; }
+    .category-copy > div { overflow:hidden; }
+    .category-copy p { margin:0; padding:0 0 24px; font-size:16px; line-height:24px; }
+    .category-button[aria-expanded="true"] + .category-copy { grid-template-rows:1fr; }
+    .media { position:relative; overflow:hidden; width:656px; height:512px; border-radius:24px; background:#f7eaf1 url("https://neuropro-promo-ruslan.sabzrus.chatgpt.site/assets/video-background.png") center/cover no-repeat; }
+    .media-frame { position:relative; width:100%; height:100%; }
+    .media-frame video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; opacity:0; transition:opacity 200ms ease-in-out; }
+    .media-frame video.is-active { opacity:1; }
+    @media (prefers-reduced-motion: reduce) { .media-frame video { transition-duration:1ms; } }
+    .media-placeholder { display:grid; place-items:center; gap:12px; color:#807781; text-align:center; }
+    .media-icon { display:grid; place-items:center; width:76px; height:76px; border:1px solid rgba(70,58,72,.14); border-radius:22px; background:rgba(255,255,255,.62); box-shadow:0 14px 32px rgba(95,62,80,.08); }
+    .media-icon svg { width:32px; height:32px; }
+    .media-placeholder strong { color:#4d484f; font-size:18px; }
+    .media-placeholder span { font-size:14px; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="section">
+      <h1>Какие задачи умеет решать Про</h1>
+      <div class="layout">
+        <div class="categories">
+          <article class="category">
+            <button class="category-button" aria-expanded="true" data-video="https://neuropro-promo-ruslan.sabzrus.chatgpt.site/assets/promo_video_1.mp4"><span>Ответы на юридические<br>и бухгалтерские вопросы</span><span class="chevron" aria-hidden="true"></span></button>
+            <div class="category-copy"><div><p>Проконсультирую<br>по составлению договоров<br>и заполнению декларации</p></div></div>
+          </article>
+          <article class="category">
+            <button class="category-button" aria-expanded="false" data-video="https://neuropro-promo-ruslan.sabzrus.chatgpt.site/assets/promo_video_2.mp4"><span>Консультация<br>по сложным вопросам</span><span class="chevron" aria-hidden="true"></span></button>
+            <div class="category-copy"><div><p>Разберу нестандартную ситуацию и предложу понятный план действий</p></div></div>
+          </article>
+          <article class="category">
+            <button class="category-button" aria-expanded="false" data-video="https://neuropro-promo-ruslan.sabzrus.chatgpt.site/assets/promo_video_3.mp4"><span>Решение задач<br>по развитию бизнеса</span><span class="chevron" aria-hidden="true"></span></button>
+            <div class="category-copy"><div><p>Подготовлю стратегию, коммерческое предложение и контент-план</p></div></div>
+          </article>
+          <article class="category">
+            <button class="category-button" aria-expanded="false" data-video="https://neuropro-promo-ruslan.sabzrus.chatgpt.site/assets/promo_video_4.mp4"><span>Помощь в найме<br>и развитии сотрудников</span><span class="chevron" aria-hidden="true"></span></button>
+            <div class="category-copy"><div><p>Составлю вакансию, вопросы для интервью и план адаптации</p></div></div>
+          </article>
+        </div>
+        <div class="media" aria-label="Медиаматериал">
+          <div class="media-frame" id="mediaFrame">
+            <video class="is-active" src="https://neuropro-promo-ruslan.sabzrus.chatgpt.site/assets/promo_video_1.mp4" autoplay muted loop playsinline preload="auto" aria-label="Демонстрация возможностей Про"></video>
+            <video src="https://neuropro-promo-ruslan.sabzrus.chatgpt.site/assets/promo_video_1.mp4" muted loop playsinline preload="auto" aria-hidden="true"></video>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const videos = [...document.querySelectorAll('.media-frame video')];
+    let activeVideo = 0;
+    let switchToken = 0;
+    document.querySelectorAll('.category-button').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.category-button').forEach(item => item.setAttribute('aria-expanded','false'));
+        button.setAttribute('aria-expanded', 'true');
+        const current = videos[activeVideo];
+        if (current.currentSrc.endsWith(button.dataset.video)) return;
+        const token = ++switchToken;
+        const nextIndex = activeVideo === 0 ? 1 : 0;
+        const next = videos[nextIndex];
+        next.src = button.dataset.video;
+        next.load();
+        const reveal = () => {
+          if (token !== switchToken) return;
+          next.currentTime = 0;
+          next.play().catch(() => {});
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            if (token !== switchToken) return;
+            next.classList.add('is-active');
+            current.classList.remove('is-active');
+            next.setAttribute('aria-hidden','false');
+            current.setAttribute('aria-hidden','true');
+            activeVideo = nextIndex;
+            window.setTimeout(() => current.pause(), 200);
+          }));
+        };
+        next.readyState >= 2 ? reveal() : next.addEventListener('loadeddata', reveal, { once:true });
+      });
+    });
+  </script>
+</body>
+</html>
